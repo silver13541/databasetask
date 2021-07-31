@@ -24,4 +24,12 @@ app.use("/task2", function (request, responce) {
   });
 });
 
+app.use("/task3", function (request, responce) {
+  connection.query("SELECT C.* FROM Cities C INNER JOIN Countries CO ON C.country_id=CO.id ", (err, result, fields) => {
+    console.log(result);
+    if (err) console.log(err);
+    responce.send(result)
+  });
+});
+
 app.listen(4000);
