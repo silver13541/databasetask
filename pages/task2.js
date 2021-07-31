@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 export default function Task2({rescities}) {     
-    const[cities,setCities] = useState(rescities);
+    const[cities,setCities] = useState([]);
     const[value,setValue] = useState(1);
 
     function onChange(e){

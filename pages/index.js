@@ -5,7 +5,7 @@ export default function Task1({ countries }) {
     <div>
       {countries.map((country) => (
         <ul key={country.id}>
-          <li>{country.name}</li>
+          <li>{country.Name}</li>
         </ul>
       ))}
     </div>
