@@ -1,11 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import React from "react";
 
-export default function Home() {
+export default function Task1({ countries }) {
   return (
-    <div >
-      {{countries}}
+    <div>
+      {countries.map((country) => (
+        <ul key={country.id}>
+          <li>{country.name}</li>
+        </ul>
+      ))}
     </div>
-  )
+  );
 }
+
+Task1.getInitialProps = async () => {
+  const response = await fetch("http://localhost:4000/task1");
+  const countries = await response.json();
+  return { countries };
+};
