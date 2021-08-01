@@ -9,31 +9,15 @@ const connection = mysql.createConnection({
   password: "RcCrZkDPTA",
 });
 
-app.use("/task1", function (request, responce) {
+app.use("/countries", function (request, responce) {
   connection.query("SELECT * FROM Countries", (err, result, fields) => {
     if (err) console.log(err);
     responce.send(result)
   });
 });
 
-app.use("/task2", function (request, responce) {
-  connection.query("SELECT C.* FROM Cities C INNER JOIN Countries CO ON C.country_id=CO.id ", (err, result, fields) => {
-    console.log(result);
-    if (err) console.log(err);
-    responce.send(result)
-  });
-});
-
-app.use("/task3", function (request, responce) {
-  connection.query("SELECT C.* FROM Cities C INNER JOIN Countries CO ON C.country_id=CO.id ", (err, result, fields) => {
-    console.log(result);
-    if (err) console.log(err);
-    responce.send(result)
-  });
-});
-
-app.use("/task4", function (request, responce) {
-  connection.query("SELECT C.*,CO.Name FROM Cities as C,Countries as CO WHERE C.country_id=CO.id ", (err, result, fields) => {
+app.use("/cfromco", function (request, responce) {
+  connection.query("SELECT C.*,CO.Name FROM Cities as C,Countries as CO WHERE C.country_id=CO.id", (err, result, fields) => {
     console.log(result);
     if (err) console.log(err);
     responce.send(result)

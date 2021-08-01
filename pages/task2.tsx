@@ -36,7 +36,7 @@ export default function Task2({rescities}) {
 }
 
 Task2.getInitialProps = async () => {
-    const response = await fetch("http://localhost:4000/task2");
+    const response = await fetch("http://localhost:4000/cfromco");
     const rescities = await response.json();
     return {rescities};
 };
