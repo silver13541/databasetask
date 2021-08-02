@@ -7,7 +7,7 @@ export default function Task7({ rescities }) {
   const [value, setValue] = useState("");
   const [hidden, setHidden] = useState(true);
   const [button, setButton] = useState("next");
-  const [Coordinates, setCoordinates] = useState("");
+  const [Coordinates, setCoordinates] = useState('56.874798 53.193452');
 
   useEffect(() => {
     if (value != "") {
