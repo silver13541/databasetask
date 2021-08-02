@@ -96,7 +96,7 @@ export default function Task7({ rescities }) {
 }
 
 Task7.getInitialProps = async () => {
-  const response = await fetch("http://localhost:4000/cfromco");
+  const response = await fetch("https://databasetask.herokuapp.com/cities");
   const rescities = await response.json();
   return { rescities };
 };
