@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { ListGroup } from "react-bootstrap";
+import { Header } from "../layout/Header";
 
 export default function Task2({rescities}) {     
     const[cities,setCities] = useState([]);
@@ -16,6 +18,7 @@ export default function Task2({rescities}) {
 
     return (
         <>
+        <Header />
         <select onChange={onChange}>
             <option value="1">Austria</option>
             <option value="2">Belgium</option>
@@ -27,7 +30,7 @@ export default function Task2({rescities}) {
 
         {cities.map((city) => (
             <ul key={city.id}>
-            <li>{city.name}</li>
+            <li>{city.name}</li>       
             </ul>
         ))} 
         </>

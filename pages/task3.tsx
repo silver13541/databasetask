@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Header } from "../layout/Header";
 
 export default function Task3({ rescities }) {
   const [cities, setCities] = useState([]);
@@ -28,6 +29,7 @@ export default function Task3({ rescities }) {
 
   return (
     <>
+    <Header />
       <select onChange={onChange}>
         <option value="1">Austria</option>
         <option value="2">Belgium</option>

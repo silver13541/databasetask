@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Header } from "../layout/Header";
 
 export default function Task6({ rescities }) {
   const [cities, setCities] = useState([]);
@@ -44,6 +45,7 @@ export default function Task6({ rescities }) {
 
   return (
     <>
+    <Header />
       <input onChange={onChange} type="text" size={10} />
       {cities.map((city) => (
         <ul key={city.id}>

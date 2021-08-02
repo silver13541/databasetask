@@ -1,14 +1,19 @@
 import React from "react";
+import { Container, ListGroup} from "react-bootstrap";
+import { Header } from "../layout/Header";
 
 export default function Task1({ countries }) {
   return (
-    <div>
-      {countries.map((country) => (
-        <ul key={country.id}>
-          <li>{country.Name}</li>
-        </ul>
-      ))}
-    </div>
+    <>
+      <Header />
+      <Container>
+        {countries.map((country) => (
+          <ListGroup variant="flush" key={country.id}>
+            <ListGroup.Item>{country.Name}</ListGroup.Item>
+          </ListGroup>
+        ))}
+      </Container>
+    </>
   );
 }
 

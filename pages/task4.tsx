@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Header } from "../layout/Header";
 
 export default function Task4({ rescities }) {
   const [cities, setCities] = useState([]);
@@ -48,6 +49,7 @@ export default function Task4({ rescities }) {
 
   return (
     <>
+    <Header />
       <input onChange={onChange} type="text" size={10} />
       <button onClick={Search}>Поиск</button>
       {cities.map((city) => (
