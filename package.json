@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "server": "nodemon ./server/app.js"
+    "server": "node ./server/app.js"
   },
   "dependencies": {
     "@types/jest": "^26.0.24",
