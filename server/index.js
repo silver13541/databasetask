@@ -2,6 +2,8 @@ const mysql = require("mysql2");
 const express = require("express");
 const app = express();
 
+const PORT = process.env.PORT || 4000
+
 const connection = mysql.createConnection({
   host: "sql11.freesqldatabase.com",
   user: "sql11428394",
@@ -24,4 +26,4 @@ app.get("/cities", function (request, responce) {
   });
 });
 
-app.listen(4000);
+app.listen(PORT);
