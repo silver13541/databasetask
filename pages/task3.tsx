@@ -3,19 +3,19 @@ import React, { useEffect, useState } from "react";
 export default function Task3({ rescities }) {
   const [cities, setCities] = useState([]);
   const [value, setValue] = useState(1);
-  const [button, setButton] = useState("вперед");
+  const [button, setButton] = useState("next");
 
   function onChange(e) {
-    setButton("вперед");
+    setButton("next");
     setValue(e.target.value);
   }
 
   function onClick() {
-    button == "вперед" ? setButton("назад") : setButton("вперед");
+    button == "next" ? setButton("back") : setButton("next");
   }
 
   useEffect(() => {
-    if (button == "вперед") {
+    if (button == "next") {
       const cities = rescities
         .filter((city) => city.country_id == value)
         .slice(0, 5);

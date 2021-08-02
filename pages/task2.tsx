@@ -5,8 +5,7 @@ export default function Task2({rescities}) {
     const[value,setValue] = useState(1);
 
     function onChange(e){
-        let value = e.target.value;
-        setValue(value); 
+        setValue(e.target.value); 
     } 
 
     useEffect(() => {   

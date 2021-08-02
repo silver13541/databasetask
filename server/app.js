@@ -17,7 +17,7 @@ app.use("/countries", function (request, responce) {
 });
 
 app.use("/cfromco", function (request, responce) {
-  connection.query("SELECT C.*,CO.Name FROM Cities as C,Countries as CO WHERE C.country_id=CO.id", (err, result, fields) => {
+  connection.query("SELECT C.*,CO.Name,CO.Coordinates FROM Cities as C,Countries as CO WHERE C.country_id=CO.id", (err, result, fields) => {
     console.log(result);
     if (err) console.log(err);
     responce.send(result)
